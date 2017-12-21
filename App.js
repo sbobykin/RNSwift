@@ -25,7 +25,7 @@ export default class App extends Component<{}> {
   render() {
     if (Platform.OS === 'ios') {
       return (
-          <SwiftView style={{flex: 1}} />
+          <SwiftView text="text from js side" style={{flex: 1}} />
       )
     } else {
       return (
