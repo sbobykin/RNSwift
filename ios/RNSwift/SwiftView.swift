@@ -8,7 +8,6 @@
 
 import UIKit
 
-@objc(SwiftView)
 class SwiftView: UIView {
   let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
   
