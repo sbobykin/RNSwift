@@ -12,6 +12,8 @@ import {
   View
 } from 'react-native';
 
+import SwiftView from './SwiftView.js';
+
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
@@ -21,19 +23,24 @@ const instructions = Platform.select({
 
 export default class App extends Component<{}> {
   render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
-      </View>
-    );
+    if (Platform.OS === 'ios') {
+      return (
+          <SwiftView style={{flex: 1}} />
+      )
+    } else {
+      return (
+        <View style={{
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+        }}>
+          <Text style={{
+            fontSize: 20,
+            textAlign: 'center'
+          }}>Only ios is supported</Text>
+        </View>
+      )
+    }
   }
 }
 
