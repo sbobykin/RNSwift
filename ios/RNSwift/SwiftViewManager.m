@@ -7,6 +7,7 @@
 //
 #import <MapKit/MapKit.h>
 #import "SwiftViewManager.h"
+#import "RNSwift-swift.h"
 
 @implementation SwiftViewManager
 
@@ -14,7 +15,8 @@ RCT_EXPORT_MODULE()
 
 - (UIView *) view
 {
-  return [[MKMapView alloc] init];
+  //return [[MKMapView alloc] init];
+  return [[SwiftView alloc] init];
 }
 
 @end
