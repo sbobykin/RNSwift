@@ -9,13 +9,17 @@
 import UIKit
 
 class SwiftView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+  let label = UILabel(frame: CGRect(x: 30, y: 50, width: 300, height: 50))
+  
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    
+    label.text = "This is label inside the SwiftView"
+    addSubview(label)
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("Init coder isn't supported")
+  }
 
 }
