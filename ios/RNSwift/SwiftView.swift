@@ -14,10 +14,20 @@ class SwiftView: UIView {
   override init(frame: CGRect) {
     super.init(frame: frame)
     
-    label.text = "This is initial text on the swift side"
-    addSubview(label)
+    //label.text = "This is initial text on the swift side"
+    //addSubview(label)
     
-    //let childMainSB = UIStoryboard(name: "ChildVC", bundle: nil)
+    let childVCSB = UIStoryboard(name: "ChildVC", bundle: nil)
+    if let rootVC = UIApplication.shared.delegate?.window??.rootViewController,
+       let childVC = childVCSB.instantiateInitialViewController() {
+      
+      rootVC.addChildViewController(childVC)
+      addSubview(childVC.view)
+      childVC.didMove(toParentViewController: rootVC)
+    }
+    
+    
+    
   }
   
   required init?(coder aDecoder: NSCoder) {
