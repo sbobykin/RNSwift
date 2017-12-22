@@ -16,6 +16,8 @@ class SwiftView: UIView {
     
     label.text = "This is initial text on the swift side"
     addSubview(label)
+    
+    //let childMainSB = UIStoryboard(name: "ChildVC", bundle: nil)
   }
   
   required init?(coder aDecoder: NSCoder) {
