@@ -10,6 +10,7 @@ import UIKit
 
 class SwiftView: UIView {
   let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
+  let childVC = UIStoryboard(name: "ChildVC", bundle: nil).instantiateInitialViewController() as! ChildViewController
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -17,12 +18,10 @@ class SwiftView: UIView {
     //label.text = "This is initial text on the swift side"
     //addSubview(label)
     
-    let childVCSB = UIStoryboard(name: "ChildVC", bundle: nil)
-    if let rootVC = UIApplication.shared.delegate?.window??.rootViewController,
-       let childVC = childVCSB.instantiateInitialViewController() {
-      
+    if let rootVC = UIApplication.shared.delegate?.window??.rootViewController {
       rootVC.addChildViewController(childVC)
       addSubview(childVC.view)
+      autoresizesSubviews = false
       childVC.didMove(toParentViewController: rootVC)
     }
     
@@ -36,11 +35,12 @@ class SwiftView: UIView {
   
   var text: String {
     get {
-      return label.text ?? ""
+      return childVC.swiftSideLabel.text ?? ""
     }
     
     set(text) {
-      label.text = text
+      print("setting of text", text)
+      childVC.swiftSideLabel.text = text
     }
   }
 

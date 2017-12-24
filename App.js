@@ -9,6 +9,7 @@ import {
   Platform,
   StyleSheet,
   Text,
+  Button,
   View
 } from 'react-native';
 
@@ -22,14 +23,55 @@ const instructions = Platform.select({
 });
 
 export default class App extends Component<{}> {
+  constructor(props) {
+    super(props);
+    this.state = {
+      jsText: "JS Side",
+      swiftText: "Swift Side"
+    }
+
+    this.num = 0;
+  }
+
   render() {
     if (Platform.OS === 'ios') {
-      return (
+      /*return (
           <SwiftView text="Text from JS side in SwiftView" style={{
             marginTop: 50,
             marginLeft: 20,
             flex: 1
           }} />
+      )*/
+      return (
+        <View style={{
+          flex: 1,
+          marginTop: 40
+        }}>
+          <View style={{
+            marginTop: 10,
+            flex: 0.5
+          }}>
+            <Text style={{
+              textAlign: 'center'
+            }}>{this.state.jsText}</Text>
+            <Button
+              title="JS Button"
+              onPress={ () => {
+                this.setState({
+                  jsText: "JS side: JS Button tapped",
+                  swiftText: "Swift side: JS Button tapped"
+                });
+              }}
+            />
+          </View>
+          <View style={{
+            flex: 0.5
+          }}>
+            <SwiftView text={this.state.swiftText} style={{
+              flex: 1
+            }} />
+          </View>
+        </View>
       )
     } else {
       return (
