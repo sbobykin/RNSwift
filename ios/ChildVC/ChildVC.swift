@@ -7,6 +7,7 @@
 import UIKit
 
 class ChildViewController: UIViewController {
+    var swiftView: SwiftView?
     
     @IBOutlet weak var swiftSideLabel: UILabel!
     
@@ -18,6 +19,10 @@ class ChildViewController: UIViewController {
     @IBAction func swiftButtonTapped(_ sender: Any) {
         print("swift button tapped")
         swiftSideLabel.text = "Swift side: swift button tapped"
+        
+        if let svDelegate = swiftView?.delegate {
+            svDelegate.swiftButtonTapped()
+        }
     }
     
     

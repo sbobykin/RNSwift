@@ -335,7 +335,7 @@
 		74D903C11FEB60910036DDFC /* SwiftViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SwiftViewManager.m; path = RNSwift/SwiftViewManager.m; sourceTree = "<group>"; };
 		74D903DE1FEB67430036DDFC /* RNSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		74D903DF1FEB67440036DDFC /* SwiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwiftView.swift; path = RNSwift/SwiftView.swift; sourceTree = "<group>"; };
-		74E2B8F41FED0097002E8EA3 /* ChildVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildVC.swift; sourceTree = "<group>"; };
+		74E2B8F41FED0097002E8EA3 /* ChildVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = ChildVC.swift; sourceTree = "<group>"; tabWidth = 4; };
 		74E2B8F51FED0097002E8EA3 /* ChildVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChildVC.storyboard; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
