@@ -5,7 +5,7 @@
 
 import UIKit
 
-protocol SwiftViewDelegate {
+@objc protocol SwiftViewDelegate {
   func swiftButtonTapped()
 }
 
@@ -23,6 +23,7 @@ class SwiftView: SwiftViewObjC {
     
     if let rootVC = UIApplication.shared.delegate?.window??.rootViewController {
       rootVC.addChildViewController(childVC)
+      childVC.swiftView = self
       addSubview(childVC.view)
       autoresizesSubviews = false
       childVC.didMove(toParentViewController: rootVC)
