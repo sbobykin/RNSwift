@@ -2,8 +2,7 @@
 //  ViewController.swift
 //  SwiftSampleApp
 //
-//  Created by Apel Yl on 20/12/2017.
-//
+
 
 import UIKit
 
