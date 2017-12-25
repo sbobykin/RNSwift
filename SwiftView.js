@@ -4,6 +4,15 @@ import PropTypes from 'prop-types';
 
 
 class SwiftView extends React.Component {
+  _onSwiftButtonPressed = (event) => {
+
+    if (!this.props.onSwiftButtonPressed) {
+      return;
+    }
+
+    this.props.onSwiftButtonPressed(event.nativeEvent);
+  }
+
   render() {
     return <NativeSwiftView {...this.props} />
   }

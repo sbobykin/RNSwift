@@ -67,7 +67,12 @@ export default class App extends Component<{}> {
           <View style={{
             flex: 0.5
           }}>
-            <SwiftView text={this.state.swiftText} style={{
+            <SwiftView text={this.state.swiftText}
+                       onSwiftButtonPressed={ () => this.setState({
+                         jsText: "JS side: Swift Button tapped",
+                         swiftText: "Swift side: Swift Button tapped"
+                       }) }
+                       style={{
               flex: 1
             }} />
           </View>
