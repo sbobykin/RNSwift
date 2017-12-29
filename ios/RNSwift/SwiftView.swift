@@ -10,16 +10,12 @@ import UIKit
 }
 
 class SwiftView: SwiftViewObjC {
-  let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
   let childVC = UIStoryboard(name: "ChildVC", bundle: nil).instantiateInitialViewController() as! ChildViewController
   
   var delegate: SwiftViewDelegate?
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-    
-    //label.text = "This is initial text on the swift side"
-    //addSubview(label)
     
     if let rootVC = UIApplication.shared.delegate?.window??.rootViewController {
       rootVC.addChildViewController(childVC)
@@ -29,8 +25,12 @@ class SwiftView: SwiftViewObjC {
       childVC.didMove(toParentViewController: rootVC)
     }
     
+  }
+  
+  override func layoutSubviews() {
+    super.layoutSubviews()
     
-    
+    childVC.view.frame = bounds
   }
   
   required init?(coder aDecoder: NSCoder) {

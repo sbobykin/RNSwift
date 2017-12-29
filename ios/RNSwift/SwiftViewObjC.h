@@ -10,5 +10,6 @@
 @interface SwiftViewObjC : UIView
 
 @property (nonatomic, copy) RCTBubblingEventBlock onSwiftButtonPressed;
+- (void)layoutSubviews;
 
 @end

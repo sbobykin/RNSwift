@@ -26,4 +26,3 @@ SwiftView.propTypes = {
 let NativeSwiftView = requireNativeComponent('SwiftView', SwiftView);
 
 export default SwiftView;
-
