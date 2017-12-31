@@ -18,7 +18,6 @@ SwiftView* swiftView;
   swiftView = [SwiftView new];
   swiftView.delegate = self;
   return swiftView;
-  //return [[SwiftView alloc] init];
 }
 
 - (void)swiftButtonTapped {
