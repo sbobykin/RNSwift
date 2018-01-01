@@ -15,7 +15,6 @@ class SwiftView: SwiftViewObjC {
       rootVC.addChildViewController(childVC)
       childVC.swiftView = self
       addSubview(childVC.view)
-      autoresizesSubviews = false
       childVC.didMove(toParentViewController: rootVC)
     }
     
