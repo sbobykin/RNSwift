@@ -17,8 +17,14 @@ class ChildViewController: UIViewController {
     }
 
     @IBAction func swiftButtonTapped(_ sender: Any) {
-        if let svDelegate = swiftView?.delegate {
+        /*if let svDelegate = swiftView?.delegate {
             svDelegate.swiftButtonTapped()
+        }*/
+        
+        if let swiftView = swiftView {
+            guard let onSwiftButtonPressed = swiftView.onSwiftButtonPressed else { return }
+            
+            onSwiftButtonPressed([:])
         }
     }
     

@@ -5,14 +5,14 @@
 
 import UIKit
 
-@objc protocol SwiftViewDelegate {
+/*@objc protocol SwiftViewDelegate {
   func swiftButtonTapped()
-}
+}*/
 
 class SwiftView: SwiftViewObjC {
   let childVC = UIStoryboard(name: "ChildVC", bundle: nil).instantiateInitialViewController() as! ChildViewController
   
-  var delegate: SwiftViewDelegate?
+  //var delegate: SwiftViewDelegate?
   
   override init(frame: CGRect) {
     super.init(frame: frame)

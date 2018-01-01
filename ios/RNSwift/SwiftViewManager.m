@@ -16,17 +16,17 @@ SwiftView* swiftView;
 - (UIView *) view
 {
   swiftView = [SwiftView new];
-  swiftView.delegate = self;
+  //swiftView.delegate = self;
   return swiftView;
 }
 
-- (void)swiftButtonTapped {
+/*- (void)swiftButtonTapped {
   
   if(!swiftView.onSwiftButtonPressed) {
     return;
   }
   
   swiftView.onSwiftButtonPressed(@{});
-}
+}*/
 
 @end
