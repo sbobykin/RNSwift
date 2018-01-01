@@ -11,22 +11,10 @@ RCT_EXPORT_MODULE()
 RCT_EXPORT_VIEW_PROPERTY(text, NSString)
 RCT_EXPORT_VIEW_PROPERTY(onSwiftButtonPressed, RCTBubblingEventBlock)
 
-SwiftView* swiftView;
-
 - (UIView *) view
 {
-  swiftView = [SwiftView new];
-  //swiftView.delegate = self;
+  SwiftView* swiftView = [SwiftView new];
   return swiftView;
 }
-
-/*- (void)swiftButtonTapped {
-  
-  if(!swiftView.onSwiftButtonPressed) {
-    return;
-  }
-  
-  swiftView.onSwiftButtonPressed(@{});
-}*/
 
 @end
