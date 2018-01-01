@@ -17,9 +17,6 @@ class ChildViewController: UIViewController {
     }
 
     @IBAction func swiftButtonTapped(_ sender: Any) {
-        print("swift button tapped")
-        swiftSideLabel.text = "Swift side: swift button tapped"
-        
         if let svDelegate = swiftView?.delegate {
             svDelegate.swiftButtonTapped()
         }
