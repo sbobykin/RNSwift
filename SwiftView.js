@@ -14,7 +14,10 @@ class SwiftView extends React.Component {
   }
 
   render() {
-    return <NativeSwiftView {...this.props} />
+    return <NativeSwiftView 
+      {...this.props} 
+      onSwiftButtonPressed = {this._onSwiftButtonPressed}
+    />
   }
 }
 
